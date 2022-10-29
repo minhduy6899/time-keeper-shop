@@ -1,0 +1,7 @@
+@use '../../scss/' as vn;
+@import '../../scss/variables';
+@import '../../scss/mixin';
+
+.shop {
+  padding-top: $padding-top-section;
+}

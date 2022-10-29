@@ -1,0 +1,46 @@
+@use '../../scss/' as vn;
+@import '../../scss/variables';
+@import '../../scss/mixin';
+
+.shop-filter {
+  border: 1px solid rgb(224, 224, 224);
+
+  .filter-title {
+    padding: 10px 0;
+    text-align: center;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+    color: white;
+    background-color: black;
+  }
+
+  .filter-item {
+    border-bottom: 1px solid rgb(224, 224, 224);
+  }
+  .btn-clear {
+    background-color: black;
+    color: white;
+  }
+
+  .categories-filter {
+  }
+
+  .brand-filter {
+  }
+
+  .price-filter {
+    .MuiSlider-rail.css-14pt78w-MuiSlider-rail {
+      background-color: rgb(211, 211, 211);
+    }
+
+    .MuiSlider-track.css-1gv0vcd-MuiSlider-track {
+      background-color: $main-color;
+      border: none;
+    }
+
+    .MuiSlider-thumb.MuiSlider-thumbColorPrimary {
+      background-color: rgb(206, 206, 206);
+    }
+  }
+}

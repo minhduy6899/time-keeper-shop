@@ -1,0 +1,234 @@
+@use '../../scss/' as vn;
+@import '../../scss/variables';
+@import '../../scss/mixin';
+
+.product-detail {
+  padding-top: $padding-top-section;
+  .product-info {
+    padding: 0 50px;
+
+    @include mobile {
+      padding: 0 10px;
+    }
+    .img-main {
+      @include mobile {
+        padding: 30px;
+      }
+      padding: 80px;
+    }
+    .image-gallery-icon {
+      .image-gallery-svg {
+        opacity: 0.5;
+      }
+      &:hover {
+        color: $main-color;
+        opacity: 1;
+      }
+    }
+
+    .image-gallery-thumbnail.active,
+    .image-gallery-thumbnail:hover,
+    .image-gallery-thumbnail:focus .product-main-img {
+      border: 1px solid $main-color;
+    }
+
+    .product-qty-btn {
+      .product-button {
+        button {
+          width: 100%;
+          padding: 10px;
+          background-color: $main-color;
+          border: 1px solid transparent;
+          margin: 9px 9px;
+
+          &:hover {
+            background-color: black;
+            color: white;
+          }
+        }
+      }
+    }
+
+    .product-social {
+      .icon-social {
+        font-size: 36px;
+        font-weight: 400;
+        color: black;
+        margin: 9px 9px;
+        padding: 3px;
+        border-radius: 999px;
+
+        &:hover {
+          color: $main-color;
+          background-color: #fff;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .product-description {
+    padding-top: $padding-top-section;
+    .tablist {
+      @include mobile {
+        width: 85vw;
+      }
+      width: 75vw;
+      .tab-title {
+        display: flex;
+        justify-content: space-around;
+        border: none;
+        li {
+          margin-right: 3rem;
+          button {
+            font-size: 24px;
+            line-height: 22px;
+            font-weight: 700;
+            font-family: 'philosopher';
+            color: gray;
+            border: none;
+            letter-spacing: 4px;
+          }
+
+          .nav-link.active {
+            color: black;
+            border: none;
+            border-bottom: 3px solid $main-color;
+          }
+        }
+      }
+
+      .review_item {
+        margin-bottom: 35px;
+
+        &:last-child {
+          margin-bottom: 0px;
+        }
+
+        p {
+          color: black;
+        }
+
+        .media {
+          position: relative;
+
+          .d-flex {
+            padding-right: 15px;
+          }
+
+          .media-img {
+            flex-direction: row;
+            margin-right: 1rem;
+            width: 5rem;
+
+            img {
+              border-radius: 9999px;
+            }
+          }
+
+          .media-body {
+            vertical-align: middle;
+            align-self: center;
+
+            h4 {
+              margin-bottom: 0px;
+              font-size: 14px;
+              color: black;
+              // font-family: $body-font;
+              margin-bottom: 8px;
+            }
+
+            i {
+              color: #fbd600;
+            }
+
+            h5 {
+              font-size: 13px;
+              font-weight: normal;
+              color: black;
+            }
+
+            .reply_btn {
+              border: 1px solid #e0e0e0;
+              padding: 0px 28px;
+              display: inline-block;
+              line-height: 32px;
+              border-radius: 16px;
+              font-size: 14px;
+              // font-family: $body-font;
+              color: black;
+              position: absolute;
+              right: 0px;
+              top: 14px; // @icnlude transition;
+
+              &:hover {
+                background: $main-color;
+                border-color: $main-color;
+                color: #fff;
+              }
+            }
+          }
+        }
+
+        p {
+          padding-top: 10px;
+          margin-bottom: 0px;
+        }
+
+        &.reply {
+          padding-left: 28px;
+        }
+      }
+
+      .review_box {
+        .contact_form {
+          .input-review {
+            margin-bottom: 1rem;
+          }
+        }
+        h4 {
+          font-size: 24px;
+          color: black;
+          margin-bottom: 20px;
+          font-weight: 700;
+        }
+
+        p {
+          margin-bottom: 0px;
+          display: inline-block;
+          font-weight: 500;
+        }
+
+        .list {
+          display: inline-block;
+          padding-left: 10px;
+          padding-right: 10px;
+
+          li {
+            display: inline-block;
+
+            a {
+              display: inline-block;
+              color: #fbd600;
+            }
+          }
+        }
+        .form-control {
+          height: 50px;
+          border-radius: 0;
+        }
+        ::placeholder {
+          font-size: 14px;
+        }
+        .btn_3 {
+          padding: 13px 39px;
+          background-color: black;
+          color: white;
+        }
+        .contact_form {
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+}

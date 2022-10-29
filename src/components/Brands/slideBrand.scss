@@ -1,0 +1,180 @@
+@use '../../scss/' as vn;
+@import '../../scss/variables';
+@import '../../scss/mixin';
+
+.slide-brands {
+  padding: $padding-top-section 0;
+  h1 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+  }
+  p {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #555555;
+  }
+  .slide-brands-content {
+    padding-top: 30px;
+  }
+  .slick-slider {
+    .slick-list {
+      padding-left: 13px;
+    }
+    .slick-arrow {
+      position: absolute;
+      width: 5rem;
+      height: 5rem;
+      z-index: 30;
+    }
+    .slick-prev {
+      left: 0;
+      &::before {
+        font-family: 'slick';
+        font-size: 40px;
+        color: $main-color;
+        line-height: 1;
+        opacity: 0.4;
+
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      &:hover {
+        &::before {
+          color: $main-color;
+          opacity: 0.8;
+        }
+      }
+    }
+
+    .slick-next {
+      right: 0px;
+      &::before {
+        font-family: 'slick';
+        font-size: 40px;
+        color: $main-color;
+        line-height: 1;
+        opacity: 0.4;
+
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      &:hover {
+        &::before {
+          color: $main-color;
+          opacity: 0.8;
+        }
+      }
+    }
+
+    .slick-dots {
+      position: absolute;
+      bottom: 0px;
+      display: block;
+      width: 100%;
+      padding: 20px;
+      margin: 0;
+      list-style: none;
+      text-align: center;
+
+      li {
+        button {
+          font-size: 0;
+          line-height: 0;
+          display: block;
+          width: 20px;
+          height: 20px;
+          padding: 5px;
+          cursor: pointer;
+          color: rgba(29, 231, 90, 0);
+          border: 0;
+          outline: none;
+          background: rgba(8, 133, 190, 0);
+
+          &::before {
+            font-family: 'slick';
+            font-size: 39px;
+            font-weight: 900;
+            line-height: 20px;
+            position: absolute;
+            top: -20px;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            content: '_';
+            text-align: center;
+            opacity: 0.25;
+            color: gray;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+          }
+        }
+      }
+
+      .slick-active {
+        button {
+          font-size: 0;
+          line-height: 0;
+          display: block;
+          width: 20px;
+          height: 20px;
+          padding: 5px;
+          cursor: pointer;
+          color: rgba(29, 231, 90, 0);
+          border: 0;
+          outline: none;
+          background: rgba(8, 133, 190, 0);
+
+          &::before {
+            font-family: 'slick';
+            font-size: 39px;
+            line-height: 20px;
+            position: absolute;
+            top: -20px;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            content: '_';
+            text-align: center;
+            opacity: 0.8;
+            color: $main-color;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+          }
+        }
+      }
+    }
+
+    .slick-list {
+      .slide-item {
+        background-color: black;
+        .slide-item-left {
+          padding: 0 10px;
+          @include tablet-small {
+            padding-top: 40px;
+          }
+          h5 {
+            font-size: 1.5rem;
+            color: $main-color;
+          }
+
+          h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 0;
+            line-height: 1;
+          }
+
+          p {
+            color: gray;
+            span {
+              color: $main-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

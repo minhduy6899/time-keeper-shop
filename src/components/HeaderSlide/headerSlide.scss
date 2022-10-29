@@ -1,0 +1,195 @@
+@use '../../scss/' as vn;
+@import '../../scss/variables';
+@import '../../scss/mixin';
+
+.header-slide {
+  .slick-slider {
+    .slick-arrow {
+      position: absolute;
+      width: 5rem;
+      height: 5rem;
+      z-index: 30;
+    }
+
+    .slick-prev {
+      left: 0;
+      &::before {
+        font-family: 'slick';
+        font-size: 40px;
+        line-height: 1;
+        opacity: 0.3;
+
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    }
+
+    .slick-next {
+      right: 0px;
+      &::before {
+        font-family: 'slick';
+        font-size: 40px;
+        line-height: 1;
+        opacity: 0.3;
+
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    }
+
+    .slick-dots {
+      color: aqua;
+      border-color: yellow;
+      position: absolute;
+      bottom: 0px;
+      display: block;
+      width: 100%;
+      padding: 20px;
+      margin: 0;
+      list-style: none;
+      text-align: center;
+
+      @include mobile {
+        display: none !important;
+      }
+
+      li {
+        button {
+          font-size: 0;
+          line-height: 0;
+          display: block;
+          width: 20px;
+          height: 20px;
+          padding: 5px;
+          cursor: pointer;
+          color: rgba(29, 231, 90, 0);
+          border: 0;
+          outline: none;
+          background: rgba(8, 133, 190, 0);
+
+          &::before {
+            font-family: 'slick';
+            font-size: 39px;
+            font-weight: 900;
+            line-height: 20px;
+            position: absolute;
+            top: -20px;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            content: '_';
+            text-align: center;
+            opacity: 0.25;
+            color: white;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+          }
+        }
+      }
+
+      .slick-active {
+        button {
+          font-size: 0;
+          line-height: 0;
+          display: block;
+          width: 20px;
+          height: 20px;
+          padding: 5px;
+          cursor: pointer;
+          color: rgba(29, 231, 90, 0);
+          border: 0;
+          outline: none;
+          background: rgba(8, 133, 190, 0);
+
+          &::before {
+            font-family: 'slick';
+            font-size: 39px;
+            line-height: 20px;
+            position: absolute;
+            top: -20px;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            content: '_';
+            text-align: center;
+            opacity: 0.8;
+            color: $main-color;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+          }
+        }
+      }
+    }
+
+    .slick-list {
+      .slide-item {
+        background-color: black;
+        .slide-item-left {
+          padding: 0 10px;
+          @include tablet-small {
+            padding-top: 40px;
+          }
+          h5 {
+            font-size: 1.5rem;
+            color: $main-color;
+          }
+
+          h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 0;
+            line-height: 1;
+          }
+          .revolution {
+            margin-top: 15px;
+          }
+
+          .watches {
+            margin-bottom: 15px;
+          }
+
+          p {
+            color: gray;
+            span {
+              color: $main-color;
+            }
+          }
+          .slide-item-button {
+            button {
+              padding: 5px 12px;
+              border-radius: 9999px;
+              a {
+                font-size: 12px;
+                font-weight: 600;
+
+                &:hover {
+                  color: white !important;
+                }
+              }
+
+              &:hover {
+                opacity: 0.9;
+                color: white !important;
+                background-color: $main-color !important;
+              }
+            }
+          }
+        }
+
+        .slide-item-right {
+          img {
+            height: 480px;
+            width: 100%;
+            object-fit: contain;
+
+            @include mobile {
+              height: 400px;
+              width: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,109 @@
+@use '../../scss/' as vn;
+@import '../../scss/variables';
+@import '../../scss/mixin';
+
+.products {
+  background-color: #f5f5f5;
+  padding-top: $padding-top-section;
+  padding-bottom: 50px;
+  .products-title {
+    h1 {
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 40px;
+      color: #111111;
+    }
+  }
+}
+.modal-view-product {
+  .icon-close-modal {
+    font-size: 2rem;
+    cursor: pointer;
+
+    &:hover {
+      color: $main-color;
+    }
+  }
+  .modal-container {
+    @include small-desktop {
+      overflow-y: auto;
+      width: 100%;
+    }
+    &.css-db171a {
+      border: 1px solid gray !important;
+    }
+    border-radius: 5px;
+    .product-info {
+      .img-main {
+        padding: 40px 80px 80px 80px;
+      }
+      .image-gallery-icon {
+        .image-gallery-svg {
+          opacity: 0.5;
+        }
+        &:hover {
+          color: $main-color;
+          opacity: 1;
+        }
+      }
+
+      .image-gallery-thumbnail.active,
+      .image-gallery-thumbnail:hover,
+      .image-gallery-thumbnail:focus .product-main-img {
+        border: 1px solid $main-color;
+      }
+
+      .product-qty-btn {
+        .product-button {
+          button {
+            width: 100%;
+            padding: 10px;
+            background-color: $main-color;
+            border: 1px solid transparent;
+            margin: 9px 9px;
+
+            &:hover {
+              background-color: black;
+              color: white;
+            }
+          }
+        }
+      }
+
+      .product-social {
+        .icon-social {
+          font-size: 36px;
+          font-weight: 400;
+          color: black;
+          margin: 9px 9px;
+          padding: 3px;
+          border-radius: 999px;
+
+          &:hover {
+            color: $main-color;
+            background-color: #fff;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes growth {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

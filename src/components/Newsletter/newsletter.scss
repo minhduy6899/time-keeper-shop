@@ -1,0 +1,91 @@
+@use '../../scss/' as vn;
+@import '../../scss/variables';
+@import '../../scss/mixin';
+
+.newsletter-section {
+  @include mobile-large {
+    margin-top: 70px;
+  }
+  @include mobile {
+    margin-top: 0px;
+  }
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  background: url(../../assets/images/bgwatch.jpg);
+  background-size: cover;
+  background-position: center;
+
+  .info-service {
+    @include tablet-large {
+      width: 80vw;
+    }
+    @include tablet-small {
+      width: 90vw;
+    }
+    @include mobile {
+      width: 90vw;
+    }
+
+    position: relative;
+    width: 50vw;
+    z-index: 20;
+    .info-service-title {
+      h1 {
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 30px;
+        color: white;
+      }
+    }
+    .info-service-description {
+      margin-bottom: 30px;
+      p {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 22px;
+        color: #aaaaaa;
+      }
+    }
+    .input-email {
+      width: 100%;
+      margin-bottom: 10px;
+      input {
+        border-radius: 5px;
+        padding: 12px;
+        width: 100%;
+      }
+    }
+    .info-service-button {
+      width: 100%;
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: $main-color;
+        border: 1px solid transparent;
+        a {
+          color: white;
+        }
+        &:hover {
+          a {
+            color: black;
+          }
+          background-color: white;
+          border: 1px solid transparent;
+          opacity: 1 !important;
+        }
+      }
+    }
+  }
+  &::before {
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+    opacity: 0.5;
+  }
+}

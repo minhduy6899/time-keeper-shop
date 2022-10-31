@@ -20,6 +20,9 @@ export const getProductsAction = (dataFilter) => async dispatch => {
   var requestOptions = {
     method: 'GET',
     redirect: 'follow',
+    mode: 'cors',
+    credentials: 'same-origin',
+    'Content-Type': 'application/json'
     // use the authorization
     // headers: {
     //   Authorization: "Bearer " + localStorage.getItem("@token"),

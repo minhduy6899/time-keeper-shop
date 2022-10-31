@@ -27,7 +27,7 @@ export const getProductsAction = (dataFilter) => async dispatch => {
   }
   try {
     const response = await fetch(
-      `https://time-keeper-backend.herokuapp.com/products?limit=${limit}&productName=${productName}&minPrice=${minPrice}&maxPrice=${maxPrice}&productCategories=${productCategories}&productColor=${productColor}&productSize=${productSize}&sortProducts=${sortProducts}`, requestOptions
+      `https://timekeeper-back-end.herokuapp.com/products?limit=${limit}&productName=${productName}&minPrice=${minPrice}&maxPrice=${maxPrice}&productCategories=${productCategories}&productColor=${productColor}&productSize=${productSize}&sortProducts=${sortProducts}`, requestOptions
     );
 
     const data = await response.json();
